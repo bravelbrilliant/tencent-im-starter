@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.zhoushilan.im.config.IMConfiguration,cn.zhoushilan.im.config.ApiSysConfig

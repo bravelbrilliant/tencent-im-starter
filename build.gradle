@@ -1,0 +1,64 @@
+buildscript {
+    ext {
+        springBootVersion = '2.2.12.RELEASE'
+    }
+    repositories {
+        maven { url = "http://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url = "http://mirrors.163.com/maven/repository/maven-public" }
+        maven { url = "http://repo.spring.io/release" }
+        maven { url = "http://repo.spring.io/snapshot" }
+        maven { url = "http://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'maven' // 引入maven插件
+apply plugin: 'io.spring.dependency-management'
+
+group = 'cn.zhoushilan' // 会按照group生成.m2下的目录路径
+version = '1.0.0-RELEASE' // 指定版本
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal() // 使用本地仓库
+    mavenCentral()
+}
+
+// 指定上传的路径
+def localMavenRepo = 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+
+// 上传Task，Gradle会生成并上传pom.xml文件。
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: localMavenRepo)
+
+            //构造项目的Pom文件
+            pom.project {
+                name = project.name
+                packaging = 'jar'
+                description = 'description'
+            }
+        }
+
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework.boot:spring-boot-starter:2.2.12.RELEASE'
+    implementation 'org.aspectj:aspectjweaver:1.8.13'
+    implementation "org.apache.httpcomponents:httpclient:4.5.12"
+    implementation 'com.github.tencentyun:tls-sig-api-v2:2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.2.12.RELEASE'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.6.5'
+    implementation 'com.google.guava:guava:22.0'
+    implementation 'cn.hutool:hutool-all:5.3.2'
+    implementation 'org.projectlombok:lombok:1.18.8'
+    implementation 'io.springfox:springfox-swagger2:2.8.0'
+}
