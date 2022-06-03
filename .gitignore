@@ -25,6 +25,7 @@ build
 bin
 gradlew
 gradlew.bat
+gradle/
 
 # Python
 __pycache__
