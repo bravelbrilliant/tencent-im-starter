@@ -1,0 +1,34 @@
+
+## Mac OS
+.DS_Store
+*.log
+
+## IDE configure files
+.idea/
+*.swp
+out
+*.iml
+*.ipr
+*.iws
+
+## HBuilder file
+.project
+.classpath
+.settings
+
+## C extensions
+*.so
+
+## gradle
+.gradle
+build
+bin
+gradlew
+gradlew.bat
+
+# Python
+__pycache__
+
+## other
+logs
+*.err
