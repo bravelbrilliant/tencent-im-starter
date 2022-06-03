@@ -10,12 +10,6 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class Friend {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-29 10:27
-     **/
 
     @ApiModelProperty("添加帐号")
     @JsonProperty("From_Account")

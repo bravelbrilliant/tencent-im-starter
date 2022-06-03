@@ -8,12 +8,7 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class QueryBlackList {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-29 10:33
-     **/
+
     @ApiModelProperty("查询帐号")
     @JsonProperty("From_Account")
     private String fromAccount;

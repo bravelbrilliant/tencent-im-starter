@@ -10,12 +10,6 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class ResponseFilter {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-02-03 11:11
-     **/
 
     @JsonProperty("GroupBaseInfoFilter")
     @ApiModelProperty("基础信息过滤")

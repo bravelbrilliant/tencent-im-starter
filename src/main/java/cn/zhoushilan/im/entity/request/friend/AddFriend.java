@@ -8,12 +8,7 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class AddFriend {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-29 10:33
-     **/
+
     @ApiModelProperty("添加帐号")
     @JsonProperty("To_Account")
     private String toAccount;

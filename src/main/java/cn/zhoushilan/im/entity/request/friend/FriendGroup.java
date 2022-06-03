@@ -6,12 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.List;
 
 public class FriendGroup {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-02-01 11:42
-     **/
+
     @ApiModelProperty("添加帐号")
     @JsonProperty("From_Account")
     private String fromAccount;

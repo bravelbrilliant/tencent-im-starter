@@ -7,12 +7,6 @@ import java.util.List;
 
 @Data
 public class CheckItems {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-26 20:03
-     **/
 
     public CheckItems(List<IMUser> checkItem) {
         this.CheckItem = checkItem;

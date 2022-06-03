@@ -11,12 +11,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class UpdateFriend {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-29 10:33
-     **/
+
     @ApiModelProperty("添加帐号")
     @JsonProperty("To_Account")
     private String toAccount;

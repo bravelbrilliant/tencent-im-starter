@@ -10,12 +10,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class DeleteFriend {
-    /**
-     * @program: pms
-     * @description:
-     * @author: Lee Ann
-     * @create: 2021-01-29 10:33
-     **/
+
     @ApiModelProperty("删除人帐号")
     @JsonProperty("From_Account")
     private String fromAccount;
